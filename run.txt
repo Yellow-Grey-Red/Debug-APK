@@ -1,0 +1,12 @@
+--name "枫叶APK"
+--type exe
+--runtime-image target/maple
+--module com.nfym.apk/com.nfym.apk.Main
+--dest ./dist
+--app-version 1.0.0
+--vendor "枫叶"
+--copyright "Copyright © 0-9999 枫叶。"
+--icon "icon.ico"
+--win-shortcut
+--win-dir-chooser
+--app-content target/utils

@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="718.0" prefWidth="979.0" tabClosingPolicy="UNAVAILABLE" tabMaxWidth="60.0" tabMinWidth="60.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nfym.apk.pages.apk.APKElements">
+  <tabs>
+    <Tab text="APK">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="472.0" prefWidth="833.0">
+               <children>
+                  <SplitPane dividerPositions="0.6087101063829788" layoutX="14.0" layoutY="14.0" prefHeight="647.0" prefWidth="1003.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="722.0" prefWidth="597.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox prefHeight="38.0" prefWidth="556.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="38.0" prefWidth="114.0" text="选择模拟器：" textAlignment="JUSTIFY">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <ComboBox id="choices" fx:id="choices" maxWidth="1.7976931348623157E308" prefHeight="38.0" prefWidth="350.0" promptText="请稍后..." HBox.hgrow="ALWAYS" />
+                                          <Button id="fresh" fx:id="fresh" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="95.0" text="刷新">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                       <padding>
+                                          <Insets left="10.0" right="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox prefHeight="38.0" prefWidth="556.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="38.0" prefWidth="114.0" text="运行目标：" textAlignment="JUSTIFY">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField id="apk" fx:id="apk" prefHeight="43.0" prefWidth="350.0" promptText="选择apk文件或者apk解包后的文件夹" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </TextField>
+                                          <Button id="apkbtn1" fx:id="apkbtn1" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="47.0" text="刷新">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button id="apkbtn2" fx:id="apkbtn2" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="47.0" text="刷新">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                       <padding>
+                                          <Insets left="10.0" right="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox prefHeight="38.0" prefWidth="557.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="38.0" prefWidth="114.0" text="签名文件：" textAlignment="JUSTIFY">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField id="jks" fx:id="jks" prefHeight="43.0" prefWidth="350.0" promptText="自定义签名文件（可选）" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </TextField>
+                                          <Button id="jksbtn" fx:id="jksbtn" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="95.0" text="刷新">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <padding>
+                                          <Insets left="10.0" right="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox prefHeight="43.0" prefWidth="596.0" spacing="25.0">
+                                       <children>
+                                          <HBox prefHeight="43.0" prefWidth="278.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="43.0" prefWidth="114.0" text="jks别名：" textAlignment="CENTER">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField id="jksname" fx:id="jksname" prefHeight="43.0" prefWidth="153.0" promptText="（可选）" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                             <padding>
+                                                <Insets left="10.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox prefHeight="43.0" prefWidth="286.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="43.0" prefWidth="114.0" text="jks密码：" textAlignment="JUSTIFY">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </Label>
+                                                <TextField id="jkspass" fx:id="jkspass" prefHeight="43.0" prefWidth="153.0" promptText="（可选）" HBox.hgrow="ALWAYS">
+                                                   <font>
+                                                      <Font size="16.0" />
+                                                   </font>
+                                                </TextField>
+                                             </children>
+                                             <padding>
+                                                <Insets right="10.0" />
+                                             </padding>
+                                          </HBox>
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </HBox>
+                                    <HBox prefHeight="38.0" prefWidth="557.0">
+                                       <children>
+                                          <Label alignment="CENTER" prefHeight="38.0" prefWidth="114.0" text="命令：" textAlignment="JUSTIFY">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField id="command" fx:id="command" prefHeight="43.0" prefWidth="350.0" promptText="命令" HBox.hgrow="ALWAYS">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </TextField>
+                                          <Button id="runcommand" fx:id="runcommand" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="95.0" text="执行">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                       <padding>
+                                          <Insets left="10.0" right="10.0" />
+                                       </padding>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="43.0" prefWidth="200.0" spacing="50.0">
+                                       <children>
+                                          <Button id="decompile" fx:id="decompile" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="95.0" text="反编译">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button id="compile" fx:id="compile" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="43.0" prefWidth="95.0" text="编译">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button id="dexCompile" fx:id="dexCompile" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="95.0" text="编译dex">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER" prefHeight="43.0" prefWidth="200.0" spacing="50.0">
+                                       <children>
+                                          <Button id="signer" fx:id="signer" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="95.0" text="签名">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button id="uninstall" fx:id="uninstall" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="95.0" text="卸载">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button id="install" fx:id="install" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="95.0" text="运行">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <padding>
+                                    <Insets top="30.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="178.0" prefWidth="115.0">
+                           <children>
+                              <TextArea id="textarea" fx:id="textarea" layoutX="47.0" layoutY="68.0" prefHeight="546.0" prefWidth="351.0" AnchorPane.bottomAnchor="110.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </TextArea>
+                              <Button id="clear" fx:id="clear" alignment="CENTER" layoutX="48.0" layoutY="685.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="357.0" style="-fx-letter-spacing: 40;" text="清空" textAlignment="CENTER" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Button>
+                              <ProgressBar id="process" fx:id="process" layoutX="10.0" layoutY="699.0" prefHeight="18.0" prefWidth="283.0" progress="0.23" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                              <TextField id="log_" fx:id="log_" layoutX="14.0" layoutY="636.0" maxHeight="-Infinity" prefHeight="15.0" prefWidth="353.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="暂未实现">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

@@ -1,0 +1,1 @@
+jpackage  @run.txt
